@@ -1,0 +1,75 @@
+.guests {
+  background-color: var(--color-beige);
+  &__container {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 100px 0px 150px 0px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 320px;
+    gap: 15px;
+  }
+
+  &__orange {
+    @extend %orange;
+  }
+
+  &__title {
+    @extend %title;
+    text-align: center;
+  }
+
+  &__text {
+    @extend %text;
+    text-align: center;
+  }
+
+  &__body {
+  }
+
+  &__slider {
+    display: flex;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--color-white);
+    padding: 30px;
+    margin-left: 20px;
+    flex: 1 50%;
+  }
+
+  &__buttons {
+  }
+
+  &__button {
+    &_prev {
+    }
+
+    &_next {
+    }
+  }
+}
+.card-guest {
+  &__stars {
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: 133%;
+    color: var(--color-brown);
+  }
+
+  &__text {
+  }
+
+  &__name {
+  }
+}

@@ -1,3 +1,247 @@
 .footer {
   background-color: var(--color-swamp);
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 100px 10px;
+  }
+
+  &__top {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__container-top-left {
+    flex: 1;
+    display: flex;
+    gap: 10px;
+  }
+
+  &__nav {
+    display: block;
+    flex: 0 50%;
+  }
+
+  &__social {
+    flex: 0 50%;
+  }
+
+  &__newsletter {
+    flex: 1;
+  }
+
+  &__bottom {
+  }
+}
+
+.nav-footer {
+  &__title {
+    @extend %footer-title;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__item {
+  }
+
+  &__link {
+    color: var(--color-white);
+    transition: all 300ms ease-out;
+    &:hover {
+      color: var(--color-orange);
+      transition: all 300ms ease-out;
+    }
+  }
+}
+
+.social-footer {
+  &__title {
+    @extend %footer-title;
+  }
+
+  &__items {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__link {
+    &_1 {
+      width: 32px;
+      height: 32px;
+      background: url("/src/img/footer/footerSocialLogo1.svg") no-repeat;
+      transition: all 300ms ease-out;
+      &:hover {
+        background: url("/src/img/footer/footerSocialLogo1orange.svg") no-repeat;
+        transition: all 300ms ease-out;
+      }
+    }
+    &_2 {
+      width: 32px;
+      height: 32px;
+      background: url("/src/img/footer/footerSocialLogo2.svg") no-repeat;
+      transition: all 300ms ease-out;
+      &:hover {
+        background: url("/src/img/footer/footerSocialLogo2orange.svg") no-repeat;
+        transition: all 300ms ease-out;
+      }
+    }
+    &_3 {
+      width: 32px;
+      height: 32px;
+      background: url("/src/img/footer/footerSocialLogo3.svg") no-repeat;
+      transition: all 300ms ease-out;
+      &:hover {
+        background: url("/src/img/footer/footerSocialLogo3orange.svg") no-repeat;
+        transition: all 300ms ease-out;
+      }
+    }
+  }
+
+  &__image {
+  }
+}
+.newsletter-footer {
+  &__title {
+    @extend %footer-title;
+  }
+
+  &__text {
+    color: var(--color-white);
+    padding-bottom: 10px;
+  }
+
+  &__form {
+    position: relative;
+  }
+
+  &__input {
+    height: 50px;
+    width: 100%;
+    border-radius: 6px;
+    padding: 16px 90px 16px 30px;
+    color: var(--color-swamp);
+    font-size: 18px;
+  }
+
+  &__button {
+    padding: 10px;
+    border-radius: 6px;
+    background-color: var(--color-swamp);
+    color: var(--color-beige);
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    transition: all 300ms ease-out;
+    &:hover {
+      background-color: var(--color-orange);
+      color: var(--color-beige);
+      transition: all 300ms ease-out;
+    }
+  }
+}
+.bottom-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  &__logo {
+  }
+
+  &__rights {
+    color: var(--color-beige);
+  }
+
+  &__contacts {
+    display: flex;
+    gap: 20px;
+    color: var(--color-beige);
+  }
+
+  &__link {
+    position: relative;
+    color: var(--color-beige);
+    transition: all 300ms ease-out;
+    &:hover {
+      color: var(--color-orange);
+      transition: all 300ms ease-out;
+    }
+    &::after {
+      content: "";
+      height: 1px;
+      width: 10px;
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: -15px;
+      background-color: var(--color-beige);
+    }
+  }
+
+  &__location {
+  }
+}
+@media (max-width: 992px) {
+  .footer {
+    &__container {
+      padding: 40px 10px;
+      gap: 40px;
+    }
+
+    &__top {
+      flex-direction: column;
+    }
+    &__container-top-left {
+      justify-content: space-around;
+    }
+
+    &__nav {
+      flex: 0 auto;
+    }
+
+    &__social {
+      flex: 0 auto;
+    }
+  }
+  .newsletter-footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    &__container {
+      padding: 20px 10px;
+      gap: 20px;
+    }
+    &__container-top-left {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .bottom-footer {
+    gap: 15px;
+    &__contacts {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    &__rights {
+      text-align: center;
+    }
+    &__link {
+      &::after {
+        height: 0;
+        width: 0;
+      }
+    }
+  }
 }
