@@ -1,0 +1,108 @@
+.hurry {
+  background-color: var(--color-beige);
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // align-items: center;
+    padding: 100px 10px;
+    gap: 30px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 320px;
+    gap: 15px;
+  }
+
+  &__orange {
+    @extend %orange;
+  }
+
+  &__title {
+    @extend %title;
+    text-align: center;
+  }
+
+  &__text {
+    @extend %text;
+    text-align: center;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  &__button {
+    color: var(--color-beige);
+    background-color: var(--color-swamp);
+    border: 3px solid var(--color-swamp);
+    transition: all 300ms ease-out;
+    &:hover {
+      background-color: var(--color-orange);
+      border: 3px solid var(--color-orange);
+      transition: all 300ms ease-out;
+    }
+
+    &_border {
+      color: var(--color-swamp);
+      background-color: var(--color-beige);
+      border: 3px solid var(--color-swamp);
+      &:hover {
+        background-color: var(--color-beige);
+        border: 3px solid var(--color-orange);
+        color: var(--color-orange);
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .hurry {
+    &__container {
+      padding: 40px 10px;
+      gap: 40px;
+    }
+
+    &__info {
+      padding: 0px 100px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .hurry {
+    &__container {
+      padding: 20px 10px;
+      gap: 20px;
+    }
+
+    &__info {
+      padding: 0px;
+    }
+    &__buttons {
+    }
+    &__button {
+      flex: 1;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .hurry {
+    &__container {
+    }
+    &__info {
+      padding: 0;
+    }
+    &__buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+    &__button {
+    }
+  }
+}
